@@ -1,0 +1,39 @@
+{
+    "model_type": "SVM with HOG + Geometrical Features",
+    "feature_extraction": {
+        "hog": {
+            "orientations": 9,
+            "pixels_per_cell": [
+                8,
+                8
+            ],
+            "cells_per_block": [
+                2,
+                2
+            ],
+            "block_norm": "L2-Hys"
+        },
+        "geometrical": {
+            "features": [
+                "area",
+                "perimeter",
+                "aspect_ratio",
+                "extent",
+                "solidity",
+                "equiv_diameter",
+                "circularity",
+                "hu_moment_1",
+                "hu_moment_2",
+                "hu_moment_3"
+            ]
+        }
+    },
+    "total_features": 154,
+    "image_size": 28,
+    "num_classes": 10,
+    "kernel": "rbf",
+    "accuracy": {
+        "train": 1.0,
+        "test": 0.997
+    }
+}
